@@ -24,7 +24,7 @@ pipeline {
         }
         stage ("Generate backend image") {
               steps {
-                   dir("springboot-angular-mysql-docker/springboot"){
+                   dir("springboot-angular-mysql-docker/springboot/app"){
                       bat "mvn clean install"
                       bat "docker build -t springboot-app ."
                   }                
